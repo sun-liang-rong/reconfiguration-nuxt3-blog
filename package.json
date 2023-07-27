@@ -1,0 +1,44 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@aceforth/nuxt-optimized-images": "^1.4.0",
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/proxy": "^2.1.0",
+    "@types/marked": "^4.0.3",
+    "@types/node": "^18.17.0",
+    "nuxt": "^3.6.5",
+    "style-resources-loader": "^1.5.0",
+    "vite-plugin-compression": "^0.5.1",
+    "vue-cli-plugin-style-resources-loader": "^0.1.5"
+  },
+  "dependencies": {
+    "@lottiefiles/lottie-player": "^1.5.7",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "animate.css": "^4.1.1",
+    "axios": "^0.27.2",
+    "compression-webpack-plugin": "^10.0.0",
+    "cross-env": "^7.0.3",
+    "dayjs": "^1.11.2",
+    "highlight.js": "^11.5.1",
+    "less": "^4.1.3",
+    "less-loader": "^11.0.0",
+    "marked": "^4.0.16",
+    "md-editor-v3": "^3.0.1",
+    "naive-ui": "^2.34.4",
+    "nprogress": "^0.2.0",
+    "nuxt-precompress": "^0.5.9",
+    "postcss-px-to-viewport": "^1.1.1",
+    "swiper": "^10.0.4",
+    "tdesign-vue-next": "^0.14.2",
+    "vite-plugin-imagemin": "^0.4.6"
+  }
+}
