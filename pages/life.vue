@@ -97,7 +97,7 @@ onMounted(() => {
   max-height: 200px;
   border-radius: 15px;
   position: relative;
-  box-shadow: 0 0 5px rgba(@primaryBoxShadow, 0.5);
+  box-shadow: 0 0 5px var(--primaryBoxShadow, 0.5);
   margin: 10px 10px 10px 10px;
 }
 

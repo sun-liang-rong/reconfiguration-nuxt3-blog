@@ -1,0 +1,25 @@
+:root {
+  --color-primary: #90caf9;
+  --color-background: #212121;
+  --primaryTbsColor: rgba(255, 255, 255);
+  --primaryColor: rgba(255, 255, 255);
+  --primaryTextColor: rgba(0, 0, 0);
+  --primaryCardColor: rgba(255, 255, 255);
+  --primaryTitleColor: rgba(255, 255, 255);
+  --primarylinkBorderColor: rgba(0, 0, 0);
+  --primaryBackgroundColor: rgba(200, 200, 200);
+  --primaryBoxShadow: rgba(0, 0, 0);
+}
+
+[data-theme="dark"] {
+  --color-primary: rgba(0, 0, 0);
+  --color-background: #fff;
+  --primaryTbsColor: rgba(25, 29, 31);
+  --primaryColor: rgba(0, 0, 0);
+  --primaryTextColor: rgba(244, 244, 244);
+  --primaryCardColor: rgba(47, 49, 51);
+  --primaryTitleColor: rgba(47, 49, 51);
+  --primarylinkBorderColor: rgba(255, 255, 255);
+  --primaryBackgroundColor: rgba(20, 20, 20);
+  --primaryBoxShadow: rgba(244, 244, 244);
+}

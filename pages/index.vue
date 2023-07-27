@@ -190,7 +190,7 @@ tagMax.value = String(res1.data.data.totals || 11);
   // border: 1px solid #fff;
 }
 .swiper-box {
-  background: rgba(@primaryCardColor, 1);
+  background: var(--primaryCardColor, 1);
   margin-top: 20px;
   width: 100%;
   height: 350px;
@@ -198,7 +198,7 @@ tagMax.value = String(res1.data.data.totals || 11);
   border-radius: 15px;
   padding: 20px 60px 20px 10px;
   box-sizing: border-box;
-  box-shadow: 0 0 10px rgba(@primaryBoxShadow, 0.5);
+  box-shadow: 0 0 10px var(--primaryBoxShadow, 0.5);
 }
 .swiper {
   width: 100%;

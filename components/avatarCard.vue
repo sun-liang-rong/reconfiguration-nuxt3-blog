@@ -42,8 +42,8 @@ const props = defineProps({nlength: {type: String},tagMax: {type: String}, tagsV
     width: 300px;
     margin: 0 0 0 20px;
     border-radius: 15px;
-    background: rgba(@primaryCardColor, 1);
-    box-shadow: 0 0 10px rgba(@primaryBoxShadow, 0.5);
+    background: var(--primaryCardColor, 1);
+    box-shadow: 0 0 10px var(--primaryBoxShadow, 0.5);
   }
   .card-img {
     width: 100%;
@@ -56,7 +56,7 @@ const props = defineProps({nlength: {type: String},tagMax: {type: String}, tagsV
     height: 90px;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 0 10px rgba(@primaryBoxShadow, 0.5);
+    box-shadow: 0 0 10px var(--primaryBoxShadow, 0.5);
   }
   .title-name {
     text-align: center;
@@ -92,7 +92,7 @@ const props = defineProps({nlength: {type: String},tagMax: {type: String}, tagsV
     padding: 2px 10px;
     display: inline-block;
     border-radius: 5px;
-    color: rgba(@primaryTextColor, 1);
+    color: var(--primaryTextColor, 1);
     background: linear-gradient(135deg, #FAB2FF, #1904E5);
     text-align: center;
       

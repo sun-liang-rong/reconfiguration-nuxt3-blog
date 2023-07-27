@@ -16,8 +16,8 @@ import { ref } from 'vue'
     width: 100%;
     height: 20px;
     /* background: #333; */
-    background-color: rgba(@primaryColor, 1);
-    color: rgba(@primaryTextColor, 1);
+    background-color: var(--primaryColor, 1);
+    color: var(--primaryTextColor, 1);
   }
 
   .beian {

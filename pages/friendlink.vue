@@ -73,7 +73,7 @@ body {
     padding: 20px;
     margin: 20px 20px 0 20px;
     border-radius: 4px;
-    background: rgba(@primaryCardColor, 1);
+    background: var(--primaryCardColor, 1);
     display: flex;
     flex-direction: column;
 
@@ -89,7 +89,7 @@ body {
     }
 
     .geshi {
-      border: 1px dashed rgba(@primarylinkBorderColor, 1);
+      border: 1px dashed var(--primarylinkBorderColor, 1);
       padding: 10px;
       border-radius: 5px;
     }
@@ -109,7 +109,7 @@ body {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      background: rgba(@primaryCardColor, 1);
+      background: var(--primaryCardColor, 1);
 
       &:hover {
         cursor: pointer;

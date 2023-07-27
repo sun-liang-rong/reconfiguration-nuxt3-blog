@@ -7,8 +7,5 @@
 <script>
 export default {
   transition: "app",
-  data() {},
-  methods: {},
-  created() {},
 };
 </script>

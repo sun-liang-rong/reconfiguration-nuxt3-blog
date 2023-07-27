@@ -26,7 +26,7 @@ const props = defineProps({width:{type: String, default:'800px'}, title: { type:
   .card {
     box-sizing: border-box;
     // max-width: 800px;
-    background: rgba(@primaryCardColor, 1);
+    background: var(--primaryCardColor, 1);
     min-height: 80px;
     border-radius: 15px;
     /* margin: 0 20px; */
@@ -34,7 +34,7 @@ const props = defineProps({width:{type: String, default:'800px'}, title: { type:
     display: flex;
     /* flex-direction: column; */
     justify-content: space-between;
-    box-shadow: 0 0 10px rgba(@primaryBoxShadow, 0.2);
+    box-shadow: 0 0 10px var(--primaryBoxShadow, 0.2);
     cursor: pointer;
   }
   .card .card-content {

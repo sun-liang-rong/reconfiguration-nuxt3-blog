@@ -59,10 +59,10 @@ const calculateDiffTime = () => {
 .lovecard {
   width: 300px;
   height: 150px;
-  background: rgba(@primaryCardColor, 1);
+  background: var(--primaryCardColor, 1);
   margin: 0 0 0 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(@primaryBoxShadow, 0.5);
+  box-shadow: 0 0 10px var(--primaryBoxShadow, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -113,7 +113,7 @@ const calculateDiffTime = () => {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  box-shadow: 0 0 5px rgba(@primaryBoxShadow, 0.5);
+  box-shadow: 0 0 5px var(--primaryBoxShadow, 0.5);
 }
 
 .love-content .grils img {
@@ -127,7 +127,7 @@ const calculateDiffTime = () => {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  box-shadow: 0 0 5px rgba(@primaryBoxShadow, 0.5);
+  box-shadow: 0 0 5px var(--primaryBoxShadow, 0.5);
 }
 
 .love-content .boy img {

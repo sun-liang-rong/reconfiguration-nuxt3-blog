@@ -139,14 +139,14 @@
   </div>
 </template>
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
-import { setTheme } from "@/assets/theme.js";
+import { onMounted, ref, nextTick } from "vue";
 const isShowTheme = ref<boolean>(true);
 const flag = ref<boolean>(false);
 const active = ref<number>(0);
 const router = useRouter();
 const route = useRoute();
 const title = ref("sunsun-blog");
+console.log(process.env)
 useHead({
   link: [
     {
@@ -157,30 +157,33 @@ useHead({
   ],
 });
 onMounted(() => {
-  init();
   window.addEventListener("scroll", handleScrollx, true);
 });
 
 const changTheme = () => {
-  const themeColor = localStorage.getItem("theme");
-  console.log(themeColor, "themeColor");
-  themeColor == "default" ? setTheme("dark") : setTheme("default");
-  isShowTheme.value = !isShowTheme.value;
+  console.log("我被点击了");
+      const html = document.querySelector('html')
+      const currentTheme = html.getAttribute('data-theme')
+      const nextTheme = currentTheme === 'light' ? 'dark' : 'light'
+      nextTheme == 'dark' ? isShowTheme.value = true : isShowTheme.value = false
+      html.setAttribute('data-theme', nextTheme)
+      localStorage.setItem('theme', nextTheme)
 };
 const init = () => {
-  const themeColor = localStorage.getItem("theme");
-  themeColor ? setTheme(themeColor) : setTheme("default");
-  themeColor
-    ? themeColor == "default"
-      ? (isShowTheme.value = false)
-      : (isShowTheme.value = true)
-    : (isShowTheme.value = false);
+  nextTick(() => {
+    const theme = localStorage.getItem('theme')
+    if (theme) {
+      theme == 'dark' ? isShowTheme.value = true : isShowTheme.value = false
+      document.documentElement.setAttribute('data-theme', theme)
+    }
+  })
 };
+init();
 const actions = computed(() => {
   console.log(route.path, " route.path");
   return route.path;
 });
-const clickTag = computed(() => (index, path) => {
+const clickTag = computed(() => (index: number, path: string) => {
   console.log(index, path);
   if (route.path != path) {
     console.log("我即将跳转");
@@ -221,8 +224,18 @@ const handleScrollx = () => {
 };
 </script>
 <style lang="less" scoped>
-@import "@/assets/theme.less";
+html,body {
+  background-color: var(--primaryBackgroundColor);
+}
+html {
+  --theme: light;
+  background: var(--primaryBackgroundColor);
+}
 
+html[data-theme="dark"] {
+  --theme: dark;
+  background: var(--primaryBackgroundColor);
+}
 * {
   padding: 0;
   margin: 0;
@@ -258,8 +271,8 @@ body {
   width: 100%;
   min-height: 100vh;
   box-sizing: border-box;
-  background: rgba(@primaryBackgroundColor, 1);
-  color: rgba(@primaryTextColor, 1);
+  background: var(--primaryBackgroundColor);
+  color: var(--primaryTextColor);
   font-family: Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Helvetica Neue, Arial, Noto Sans, sans-serif, apple color emoji,
     segoe ui emoji, Segoe UI Symbol, noto color emoji, sans-serif;
@@ -281,18 +294,18 @@ body {
   width: 100%;
   height: 50px;
   // transition: .5s linear;
-  background-color: rgba(@primaryColor, 1);
-  box-shadow: 0px 4px 6px -3px  rgba(@primaryBoxShadow, 0.5);
+  background-color: var(--primaryColor, 1);
+  box-shadow: 0px 4px 6px -3px  var(--primaryBoxShadow, 0.5);
 }
 
 .tabs {
   height: 100%;
   display: flex;
   align-items: center;
-  background-color: rgba(@primaryTitleColor);
+  background-color: var(--primaryTitleColor);
   max-width: 1000px;
   margin: 0 auto;
-  background-color: rgba(@primaryColor, 1);
+  background-color: var(--primaryColor, 1);
 }
 @media screen and (min-width: 0px) and (max-width: 1000px) {
   .tabs {
@@ -323,7 +336,7 @@ body {
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
-  color: rgba(@primaryTextColor, 1);
+  color: var(--primaryTextColor, 1);
 }
 
 .table1 .tabs ul span {
@@ -345,7 +358,7 @@ body {
   box-sizing: border-box;
   cursor: pointer;
   border-radius: 4px;
-  background-color: rgba(@primaryTitleTheme, 1);
+  background-color: var(--primaryTitleTheme, 1);
 }
 .container {
   max-width: 1000px;
@@ -353,7 +366,7 @@ body {
   margin-top: 20px;
   border-radius: 15px;
   // overflow: hidden;
-  background-color: rgba(@primaryColor, 1);
+  background-color: var(--primaryColor, 1);
 }
 @media screen and (min-width: 0px) and (max-width: 1000px) {
   .container {

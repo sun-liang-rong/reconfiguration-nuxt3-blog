@@ -49,7 +49,7 @@ import { NTimeline, NTimelineItem } from "naive-ui";
         .n-timeline-item-content
         .n-timeline-item-content__content
     ) {
-    color: rgba(@primaryTextColor, 1);
+    color: var(--primaryTextColor, 1);
   }
   :deep(
       .n-timeline
@@ -57,7 +57,7 @@ import { NTimeline, NTimelineItem } from "naive-ui";
         .n-timeline-item-content
         .n-timeline-item-content__title
     ) {
-    color: rgba(@primaryTextColor, 1);
+    color: var(--primaryTextColor, 1);
   }
 }
 </style>
