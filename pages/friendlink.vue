@@ -1,5 +1,5 @@
 <template>
-  <div class="box">
+  <div class="box animate__flipOutY">
     <div class="liuyan">
       <p class="guize">友链，申请规则</p>
       <p class="lianxi">

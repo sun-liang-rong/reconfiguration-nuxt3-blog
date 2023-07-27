@@ -1,8 +1,8 @@
 <template>
-  <div class="container">
+  <div class="container animate__slideInUp">
     <!-- <space :height="'10'" /> -->
     <div class="header-box">
-      <div class="left-box">
+      <div class="left-box animate__flipOutY">
         <div class="swiper-box">
           <swiper
           :effect="'cards'"
@@ -45,7 +45,7 @@
           </div>
         </div>
       </div>
-      <div class="right-box">
+      <div class="right-box animate__flipOutY">
         <avatar-card
           :nlength="blogMax"
           :tagMax="tagMax"

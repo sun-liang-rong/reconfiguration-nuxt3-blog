@@ -1,5 +1,5 @@
 <template>
-  <div class="tag-content">
+  <div class="tag-content animate__flipOutY">
     <div class="tags-box">
       <div class="tags-title">
         <span v-for="(item, index) in tagsValue" :key="index">

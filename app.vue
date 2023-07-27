@@ -10,7 +10,7 @@
       <Meta name="baidu-site-verification" content="codeva-OwDe19KXUI" />
     </Head>
     <NuxtLayout name="default">
-      <div class="app">
+      <div class="app animate__flipOutY">
         <iframe
           src="https://zhanyuzhang.github.io/lovely-cat/cat.html"
           frameborder="0"

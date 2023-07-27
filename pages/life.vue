@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="animate__flipOutY">
     <div class="topBox"></div>
     <div class="container">
       <div></div>
